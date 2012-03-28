@@ -46,6 +46,8 @@ PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/msm7x30-common/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
 
+PRODUCT_PACKAGE_OVERLAYS += device/htc/msm7x30-common/overlay
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -64,7 +66,11 @@ PRODUCT_PACKAGES += \
     libQcomUI \
     libtilerenderer
 
-# QCOM OMX
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm7x30
+
+# Media
 PRODUCT_PACKAGES += \
     libstagefrighthw \
     libOmxCore \
